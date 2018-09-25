@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activity.MainActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/margin_16"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/textViewTodayDate"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:minHeight="@dimen/margin_50"
+            android:padding="@dimen/margin_10"
+            android:layout_marginStart="@dimen/margin_4"
+            android:layout_marginEnd="@dimen/margin_4"
+            android:text="@string/hint_1"
+            android:textSize="@dimen/textSize_18"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin_16"
+            android:orientation="horizontal">
+
+            <android.support.v7.widget.AppCompatEditText
+                android:id="@+id/editTextSelectedCurrency"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:minHeight="@dimen/margin_50"
+                android:padding="@dimen/margin_10"
+                android:background="@drawable/bg_edittext"
+                android:drawablePadding="@dimen/margin_10"
+                android:layout_marginStart="@dimen/margin_4"
+                android:layout_marginEnd="@dimen/margin_4"
+                android:imeOptions="actionDone"
+                android:maxLength="10"
+                android:text="@string/hint_1"
+                android:textSize="@dimen/textSize_18"
+                android:inputType="numberDecimal"
+                android:hint="@string/hint_0"/>
+
+            <android.support.v7.widget.AppCompatSpinner
+                style="@style/MyAppSpinner"
+                android:id="@+id/spinnerSelectedCurrency"
+                android:layout_weight="1"
+                android:layout_marginStart="@dimen/margin_4"
+                android:layout_marginEnd="@dimen/margin_4"
+                android:spinnerMode="dropdown"
+                android:drawSelectorOnTop="true"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin_16"
+            android:orientation="horizontal">
+
+            <android.support.v7.widget.AppCompatEditText
+                android:id="@+id/editTextConvertedCurrency"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:minHeight="@dimen/margin_50"
+                android:padding="@dimen/margin_10"
+                android:background="@drawable/bg_edittext"
+                android:drawablePadding="@dimen/margin_10"
+                android:layout_marginStart="@dimen/margin_4"
+                android:layout_marginEnd="@dimen/margin_4"
+                android:enabled="false"
+                android:imeOptions="actionDone"
+                android:maxLength="10"
+                android:textSize="@dimen/textSize_18"
+                android:textColor="@color/black"
+                android:inputType="numberDecimal"
+                android:hint="@string/hint_0"/>
+
+            <android.support.v7.widget.AppCompatSpinner
+                style="@style/MyAppSpinner"
+                android:id="@+id/spinnerConvertedCurrency"
+                android:layout_weight="1"
+                android:layout_marginStart="@dimen/margin_4"
+                android:layout_marginEnd="@dimen/margin_4"
+                android:spinnerMode="dropdown"
+                android:drawSelectorOnTop="true"/>
+        </LinearLayout>
+    </LinearLayout>
+</android.support.design.widget.CoordinatorLayout>
